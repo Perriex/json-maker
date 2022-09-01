@@ -20,7 +20,7 @@ export const Footer = () => {
       }}
     >
       {[
-        { label: "Home", link: "/" },
+        { label: "Home", link: "/json-maker" },
         { label: "Upload", link: "/upload" },
         { label: "Download", link: "/form" },
         { label: "About", link: "/anything" },

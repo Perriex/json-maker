@@ -15,7 +15,7 @@ function App() {
           <Route path="/form" element={<Form />}></Route>
           <Route path="/upload" element={<Main />}></Route>
           <Route path="/example" element={<Example />}></Route>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/json-maker" element={<Home />}></Route>
           <Route path="*" element={<AboutApp />}></Route>
         </Routes>
         <Footer />
