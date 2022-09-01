@@ -27,7 +27,7 @@ export const Home = () => {
           Download desired format
         </StatusIndicator>
       </Pane>
-      <Link to="/upload">
+      <Link to="/json-maker/upload">
         <Button margin={16} appearance="primary" fontSize={16}>
           start
         </Button>

@@ -20,7 +20,14 @@ export const AboutApp = () => {
       <Heading marginY={8} size={400}>
         Hope this app saves your time {" ;)"}
       </Heading>
-      <a href="" target={"_blank"}>
+      <Heading marginY={8} size={400}>
+        Will add document and other options, too!
+      </Heading>
+      <a
+        href="https://github.com/Perriex/json-maker"
+        target={"_blank"}
+        rel="noreferrer"
+      >
         <Button appearance="primary" intent="info" padding={5}>
           Give 🌟
         </Button>

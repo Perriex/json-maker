@@ -6,17 +6,19 @@ import { Footer } from "./components/Footer/Footer";
 import { Form } from "./components/Form/Form";
 import { Home } from "./components/Home/Home";
 import { Main } from "./components/Main/Main";
+import { Website } from "./components/Website/Websites";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/form" element={<Form />}></Route>
-          <Route path="/upload" element={<Main />}></Route>
-          <Route path="/example" element={<Example />}></Route>
+          <Route path="/json-maker/form" element={<Form />}></Route>
+          <Route path="/json-maker/upload" element={<Main />}></Route>
+          <Route path="/json-maker/example" element={<Example />}></Route>
+          <Route path="/json-maker/website" element={<Website />}></Route>
           <Route path="/json-maker" element={<Home />}></Route>
-          <Route path="*" element={<AboutApp />}></Route>
+          <Route path="/json-maker/*" element={<AboutApp />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

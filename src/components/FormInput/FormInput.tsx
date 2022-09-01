@@ -65,7 +65,6 @@ const ArrayInput = (
 ) => {
   const [state, setState] = useState<Array<any>>([]);
   const [object, setObject] = useState({});
-
   const [type, setType] = useState(DataType.Undefined);
   const [value, setValue] = useState(item.defaultValue[0]);
   const formContext = useContext(FormContext);
@@ -79,14 +78,6 @@ const ArrayInput = (
     if (alterSetter) alterSetter(state, item.label);
     else formContext?.set(item.path, state);
   }, [state]);
-
-  // useEffect(() => {
-  //   if (type === DataType.Object)
-  //     if (Object.keys(object).length > 0 || Object.values(object)[0] !== null) {
-  //       setState([...state, object]);
-  //       console.log([...state, object]);
-  //     }
-  // }, [object]);
 
   return (
     <Pane
@@ -201,7 +192,6 @@ const NumberInput = (
       <TextInputField
         type="number"
         width={"100%"}
-        maxWidth={"250px"}
         marginBottom={2}
         textAlign="left"
         label={item.label}
@@ -239,7 +229,6 @@ const StringInput = (
       <TextareaField
         isInvalid={true}
         width={"100%"}
-        maxWidth={"250px"}
         textAlign="left"
         label={item.label}
         placeholder="type hey ..."
@@ -276,7 +265,6 @@ const DateTimeInput = (
       <input
         defaultValue={state}
         type={"datetime-local"}
-        style={{ maxWidth: "250px", width: "100%", margin: 5 }}
         value={state}
         onChange={(e: any) => setState(e.target.value)}
       />
@@ -405,7 +393,6 @@ const inputs = (value: any, setValue: any) => [
     <TextInputField
       hint={"Number"}
       width={"100%"}
-      maxWidth={"250px"}
       value={value}
       textAlign="left"
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -417,7 +404,6 @@ const inputs = (value: any, setValue: any) => [
     <TextareaField
       hint={"String"}
       width={"100%"}
-      maxWidth={"250px"}
       value={value}
       textAlign="left"
       placeholder="type hey ..."
@@ -434,7 +420,7 @@ const inputs = (value: any, setValue: any) => [
     <input
       value={value}
       type={"datetime-local"}
-      style={{ maxWidth: "250px", width: "100%", margin: 5 }}
+      style={{ width: "100%", margin: 5 }}
       onChange={(e: any) => setValue(e.target.value)}
     />
   </div>,

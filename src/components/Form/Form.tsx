@@ -51,7 +51,15 @@ export const FormLayout = (props: {
     return "rgba(" + r() + "," + r() + "," + r() + ",.2)";
   }
   return (
-    <Pane backgroundColor={get_random_color()} padding="2px">
+    <Pane
+      backgroundColor={get_random_color()}
+      padding="2px"
+      marginY={5}
+      width="100%"
+      display="flex"
+      justifyContent="center"
+      flexDirection="column"
+    >
       <Heading size={600}>{props.title ?? ""}</Heading>
       {props.data.map((item: Item, index: number) => (
         <div

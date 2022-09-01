@@ -42,7 +42,7 @@ export const Main = () => {
       >
         View
       </Button>
-      <Link to="/form">
+      <Link to="/json-maker/form">
         <Button
           margin={16}
           disabled={
