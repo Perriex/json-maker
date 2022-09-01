@@ -17,7 +17,7 @@ function App() {
           <Route path="/json-maker/upload" element={<Main />}></Route>
           <Route path="/json-maker/example" element={<Example />}></Route>
           <Route path="/json-maker/website" element={<Website />}></Route>
-          <Route path="/json-maker" element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/json-maker/*" element={<AboutApp />}></Route>
         </Routes>
         <Footer />

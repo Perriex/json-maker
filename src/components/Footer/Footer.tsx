@@ -20,13 +20,12 @@ export const Footer = () => {
       }}
     >
       {[
-        { label: "Home", link: "/json-maker" },
+        { label: "Home", link: "/" },
         { label: "Upload", link: "/json-maker/upload" },
         { label: "Download", link: "/json-maker/form" },
         { label: "About", link: "/json-maker/anything" },
         { label: "Examples", link: "/json-maker/example" },
         { label: "Websites", link: "/json-maker/website" },
-
       ].map((tab) => (
         <Tab
           key={tab.label}
