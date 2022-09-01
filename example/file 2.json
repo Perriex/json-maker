@@ -1,0 +1,16 @@
+{
+  "title": "example of array",
+  "array1": [0],
+  "array2": [""],
+  "array3": [true],
+  "array4": [[""]],
+  "array5": ["2022/06/08"],
+  "arrayOfObject": [
+    {
+      "item1": "",
+      "item2": 1,
+      "item3": true,
+      "item4": { "dropdown": [1, 2, 3] }
+    }
+  ]
+}
