@@ -1,7 +1,7 @@
 import { Pane, Heading, TabNavigation, Button } from "evergreen-ui";
 import { useState, useEffect, createContext } from "react";
 import { NameStorage, Storage } from "../../context/storage";
-import { submit, travel } from "../../service/form-generator";
+import { submit, travel } from "../../service/form-generator.js";
 import { FormInput } from "../FormInput/FormInput";
 import { AppContextInterface } from "../../interface/FormContext";
 import { Item } from "../../interface/FormItem";

@@ -5,7 +5,7 @@ import { Storage } from "../../context/storage";
 import { Link } from "react-router-dom";
 
 export const Main = () => {
-  const [state, setState] = useState("{}");
+  const [state, setState] = useState({ welcome: "Github: Perriex" });
   const [isShown, setIsShown] = useState(false);
 
   useEffect(() => {
@@ -31,7 +31,12 @@ export const Main = () => {
       <Button
         margin={16}
         appearance="primary"
-        intent={state === "{}" ? "danger" : "success"}
+        intent={
+          JSON.stringify(state) ===
+          JSON.stringify({ welcome: "Github: Perriex" })
+            ? "danger"
+            : "success"
+        }
         fontSize={16}
         onClick={() => setIsShown(true)}
       >
@@ -40,7 +45,10 @@ export const Main = () => {
       <Link to="/form">
         <Button
           margin={16}
-          disabled={state === "{}"}
+          disabled={
+            JSON.stringify(state) ===
+            JSON.stringify({ welcome: "Github: Perriex" })
+          }
           appearance={"primary"}
           fontSize={16}
         >
