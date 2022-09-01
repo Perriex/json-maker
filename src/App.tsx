@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { AboutApp } from "./components/AboutApp/AboutApp";
 import { Example } from "./components/Example/Example";
@@ -11,17 +11,17 @@ import { Website } from "./components/Website/Websites";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
         <Routes>
-          <Route path="/json-maker/form" element={<Form />}></Route>
-          <Route path="/json-maker/upload" element={<Main />}></Route>
-          <Route path="/json-maker/example" element={<Example />}></Route>
-          <Route path="/json-maker/website" element={<Website />}></Route>
+          <Route path="/form" element={<Form />}></Route>
+          <Route path="/upload" element={<Main />}></Route>
+          <Route path="/example" element={<Example />}></Route>
+          <Route path="/website" element={<Website />}></Route>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/json-maker/*" element={<AboutApp />}></Route>
+          <Route path="/*" element={<AboutApp />}></Route>
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
