@@ -48,7 +48,7 @@ export const FormLayout = (props: {
     var r = function () {
       return Math.floor(Math.random() * 256);
     };
-    return "rgba(" + r() + "," + r() + "," + r() + ",.2)";
+    return "rgba(" + r() + "," + r() + "," + r() + ",0.1)";
   }
   return (
     <Pane

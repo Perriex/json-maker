@@ -106,7 +106,7 @@ const ArrayInput = (
         )}
         <Button
           appearance="primary"
-          intent="danger"
+          intent="success"
           width={"100px"}
           marginY={9}
           onClick={() => {
@@ -134,7 +134,9 @@ const ArrayInput = (
       </Pane>
 
       {LittleP("This is a Array field.")}
-      <Button onClick={() => setState([])}>Reset</Button>
+      <Button onClick={() => setState([])} appearance="primary" intent="danger">
+        Reset
+      </Button>
     </Pane>
   );
 };
@@ -202,7 +204,9 @@ const NumberInput = (
       />
       {LittleP("This is a number field.")}
 
-      <Button onClick={() => setState(0)}>Reset</Button>
+      <Button onClick={() => setState(0)} appearance="primary" intent="danger">
+        Reset
+      </Button>
     </Pane>
   );
 };
@@ -237,7 +241,9 @@ const StringInput = (
       />
       {LittleP("This is a string field.")}
 
-      <Button onClick={() => setState("")}>Reset</Button>
+      <Button onClick={() => setState("")} appearance="primary" intent="danger">
+        Reset
+      </Button>
     </Pane>
   );
 };
@@ -269,7 +275,9 @@ const DateTimeInput = (
         onChange={(e: any) => setState(e.target.value)}
       />
       {LittleP("This is a dateTime field.")}
-      <Button onClick={() => setState("")}>Reset</Button>
+      <Button onClick={() => setState("")} appearance="primary" intent="danger">
+        Reset
+      </Button>
     </Pane>
   );
 };
@@ -312,7 +320,9 @@ const DropDownInput = (
         </Button>
       </SelectMenu>
       {LittleP("This is a dropdown field.")}
-      <Button onClick={() => setState([])}>Reset</Button>
+      <Button onClick={() => setState([])} appearance="primary" intent="danger">
+        Reset
+      </Button>
     </Pane>
   );
 };
@@ -371,7 +381,9 @@ const MultiSelectInput = (
             ? state.map((i: any) => i.label).join(", ")
             : "nothing")
       )}
-      <Button onClick={() => setState([])}>Reset</Button>
+      <Button onClick={() => setState([])} appearance="primary" intent="danger">
+        Reset
+      </Button>
     </Pane>
   );
 };
@@ -389,7 +401,7 @@ const LittleP = (text: string) => {
 
 const inputs = (value: any, setValue: any) => [
   null,
-  <div key={"Number"}>
+  <div style={{ width: "100%" }} key={"Number"}>
     <TextInputField
       hint={"Number"}
       width={"100%"}
@@ -400,7 +412,7 @@ const inputs = (value: any, setValue: any) => [
       }}
     />
   </div>,
-  <div key={"String"}>
+  <div style={{ width: "100%" }} key={"String"}>
     <TextareaField
       hint={"String"}
       width={"100%"}
@@ -410,13 +422,13 @@ const inputs = (value: any, setValue: any) => [
       onChange={(e: any) => setValue(e.target.value)}
     />
   </div>,
-  <div key={"Array"}>
+  <div style={{ width: "100%" }} key={"Array"}>
     <Default />
   </div>,
-  <div key={"Object"}>
+  <div style={{ width: "100%" }} key={"Object"}>
     <Default />
   </div>,
-  <div key={"DateTime"}>
+  <div style={{ width: "100%" }} key={"DateTime"}>
     <input
       value={value}
       type={"datetime-local"}
@@ -424,20 +436,20 @@ const inputs = (value: any, setValue: any) => [
       onChange={(e: any) => setValue(e.target.value)}
     />
   </div>,
-  <div key={"Boolean"}>
+  <div style={{ width: "100%" }} key={"Boolean"}>
     <Switch
       margin={5}
       checked={value}
       onChange={(e) => setValue(e.target.checked)}
     />
   </div>,
-  <div key={"Dropdown"}>
+  <div style={{ width: "100%" }} key={"Dropdown"}>
     <Default />
   </div>,
-  <div key={"Multiselect"}>
+  <div style={{ width: "100%" }} key={"Multiselect"}>
     <Default />
   </div>,
-  <div key={"Undefined"}>
+  <div style={{ width: "100%" }} key={"Undefined"}>
     <Default />
   </div>,
 ];

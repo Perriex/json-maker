@@ -12,7 +12,7 @@ export const Footer = () => {
   return (
     <TabNavigation
       style={{
-        position: "absolute",
+        position: "fixed",
         left: 0,
         bottom: 0,
         width: "100%",
